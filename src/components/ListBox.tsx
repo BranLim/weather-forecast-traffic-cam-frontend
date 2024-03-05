@@ -21,13 +21,14 @@ export const ListBox = ({
   return (
     <>
       <Box
-        maxH="400px"
-        h="400px"
+        maxH="420px"
+        h="420px"
         border="1px"
         borderRadius="lg"
         borderColor="gray.200"
         overflow="scroll"
         scrollBehavior="smooth"
+        minWidth="300px"
       >
         {isLoading && (
           <center>

@@ -1,12 +1,16 @@
 import React from 'react';
 import {
   Box,
+  Flex,
   FormControl,
   FormLabel,
+  Grid,
+  GridItem,
   HStack,
   Input,
   VStack,
 } from '@chakra-ui/react';
+import { ListBox } from '../components/ListBox';
 
 export const Home = () => {
   return (
@@ -22,6 +26,12 @@ export const Home = () => {
             <Input type="time" placeholder="Select Time"></Input>
           </FormControl>
         </HStack>
+        <Box>
+          <text>Locations:</text>
+          <Flex width="100%">
+            <ListBox locations={[]} isLoading={false} />
+          </Flex>
+        </Box>
       </VStack>
     </Box>
   );
