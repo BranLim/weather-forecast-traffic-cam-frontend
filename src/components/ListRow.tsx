@@ -45,7 +45,7 @@ export const ListRow = ({
             {location.name}
             <LinkOverlay
               onClick={() => {
-                onSelectedRow && onSelectedRow(location.id);
+                onSelectedRow && onSelectedRow(location.name);
               }}
             ></LinkOverlay>
           </Text>

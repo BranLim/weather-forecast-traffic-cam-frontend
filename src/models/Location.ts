@@ -1,4 +1,6 @@
 export type Location = {
-  id: string;
+  id?: string;
   name: string;
+  latitude: number;
+  longitude: number;
 };
