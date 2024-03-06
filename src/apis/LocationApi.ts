@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Location } from '../models/Location';
 
 export const getLocation = async (datetime: string): Promise<Location[]> => {
-  const baseUrl = process.env.BACKEND_BASE_URL;
+  const baseUrl = process.env.REACT_APP_BACKEND_BASE_URL ?? '';
   let locations: Location[] = [];
   const url = `${baseUrl}/api/locations?datetime=${datetime}`;
   try {
