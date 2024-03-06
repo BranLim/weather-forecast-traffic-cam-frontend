@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { ListBox } from '../components/ListBox';
 import { getLocation } from '../apis/LocationApi';
+import { Location } from '../models/Location';
 
 interface Filter {
   date?: string;
@@ -27,14 +28,14 @@ export const Home = () => {
         return;
       }
 
-      const locations = await getLocation(
+      const foundLocations = await getLocation(
         ''.concat(filter.date, 'T', filter.time),
       );
-      if (locations) {
-        setLocations(locations);
+      if (foundLocations) {
+        setLocations(foundLocations);
       }
     })();
-  }, [locations, filter]);
+  }, [filter]);
 
   return (
     <Box maxW="sm" p="6">

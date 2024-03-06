@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Location } from '../models/Location';
 
 export const getLocation = async (datetime: string): Promise<Location[]> => {
   const baseUrl = process.env.BACKEND_BASE_URL;
